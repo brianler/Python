@@ -1,0 +1,4 @@
+#JS通过Xpath获取元素，并为其添加ID
+browser.execute_script('function getElementByXpath(path) {return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;};getElementByXpath(\'//span[@onclick="openEmailPopup(this)"]\').setAttribute("id","clickhere")')
+#JS通过ID点击元素
+browser.execute_script('document.getElementById("clickhere").click()')            
