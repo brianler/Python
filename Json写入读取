@@ -1,0 +1,5 @@
+import json
+with open('cookies_chrome.json','w',encoding='utf-8')as file:
+    file.write(json.dumps(dict/list变量,indent=2,ensure_ascii=False))
+with open('cookies_chrome.json','r',encoding='utf-8')as file:
+    dict变量=json.loads(file.read())
