@@ -1,0 +1,10 @@
+>>> a={"a":{"a":1,"b":3},"b":{"a":3,"b":1},"c":{"a":2,"b":2}}
+>>> sorted(list(a.items()),key=lambda x:x[1]["a"],reverse=True)
+-- 多级排序（内置模块）
+import operator
+
+a = [(1,2,3),(3,4,5),(0,1,2)]
+a.sort(key = operator.itemgetter(1,2)) #根据元组第1和第2位元素排序，注：不用赋值，直接改变原变量。
+print(a)-->[(0,1,2),(1,2,3),(3,4,5)]
+降序举例：
+a.sort(key = operator.itemgetter(1,2),reverse=True)
